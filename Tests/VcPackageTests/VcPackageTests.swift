@@ -3,7 +3,7 @@ import XCTest
 
 final class VcPackageTests: XCTestCase {
     func testExample() throws {
-        HttpManage<String>().requset(url: "", para: [:]) { response in
+        HttpManage<Base<SmsCode>>().requset(url: "", para: [:]) { response in
             
         } failure: { error in
             
