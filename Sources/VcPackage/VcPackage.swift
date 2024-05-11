@@ -9,7 +9,7 @@ public class HttpManage<T:Codable> {
         let headers: HTTPHeaders = ["accept": "application/json","Content-Type": "application/json",]
         AF.request(url,method: .post,parameters: para,encoding: JSONEncoding.default,headers: headers).responseDecodable(of:T.self) { resonse in
             print("请求url:",resonse.request?.url ?? "")
-            print("请求header:",resonse.response?.headers ?? "")
+            print("请求header:",resonse.request?.headers ?? "")
             print("请求参数:",para)
             switch resonse.result {
             case .success(let data):
